@@ -1,0 +1,44 @@
+[
+    {
+        "id":1,
+        "name": "Photo Shooting",
+        "description": "Taking photos for a whole day",
+        "url": "./Assets/ServicesImage/photo-shooting.jpg",
+        "price": "$399.99"
+    },
+    {
+        "id":2,
+        "name": "Video Shooting",
+        "description": "Taking photos for a whole day",
+        "url": "./Assets/ServicesImage/video-shooting.jpg",
+        "price": "$999.99"
+    },
+    {
+        "id":3,
+        "name": "Photo Editing",
+        "description": "Taking photos for a whole day",
+        "url": "./Assets/ServicesImage/Photo-Editing.jpg",
+        "price": "$649.99"
+    },
+    {
+        "id":4,
+        "name": "Pre Wedding",
+        "description": "Taking photos for a whole day",
+        "url": "./Assets/ServicesImage/Pre-Wedding.jpg",
+        "price": "$1299.99"
+    },
+    {
+        "id":5,
+        "name": "Event Organize",
+        "description": "Taking photos for a whole day",
+        "url": "./Assets/ServicesImage/Event-Organize.jpg",
+        "price": "$4999.99"
+    },
+    {
+        "id":6,
+        "name": "Photo Printing",
+        "description": "Taking photos for a whole day",
+        "url": "./Assets/ServicesImage/photo-printing.jpg",
+        "price": "$99.99"
+    }
+]
