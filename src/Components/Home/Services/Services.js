@@ -12,11 +12,11 @@ const Services = () => {
   }, []);
   return (
     <div>
-      <div className="container md:d-flex justify-center align-middle mx-auto">
-        <h6>What are offering {services.length} services </h6>
+      <div className="container md:d-flex text-center mx-auto my-5">
+        <h6>What are offering <span className="text-red-500">{services.length}</span> services </h6>
         <h1>Exclusive Memories Captured</h1>
       </div>
-      <div className="container d-flex gap-5 flex-wrap justify-center align-middle mx-auto">
+      <div className="container relative d-flex gap-5 flex-wrap justify-center align-middle mx-auto">
         {services.map((service) => (
           <Service key={service.id} service={service}></Service>
         ))}

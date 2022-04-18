@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <div>
             <div className='flex justify-center'>
-            <img src={logo} alt="" />
+            <img src={logo} alt="{logo}" />
             </div>
             <div>
                 <Navbar></Navbar>
