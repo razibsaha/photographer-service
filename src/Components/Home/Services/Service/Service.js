@@ -5,7 +5,7 @@ const Service = ({ service }) => {
   const { name, price, description, url } = service;
   return (
     <div>
-      <Card style={{ width: "24rem" }}>
+      <Card className="hover:scale-110 md:transform-none" style={{ width: "24rem" }}>
         <Card.Img
           variant="top"
           style={{ height: "18rem", objectFit: "cover" }}

@@ -1,9 +1,36 @@
-import React from "react";
+import React, { useRef } from "react";
 import googleIcon from "../../Assets/icons/google-48.png";
 import githubIcon from "../../Assets/icons/github-48.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import auth from "../../firebase.init";
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 
 const SignUp = () => {
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth); 
+
+
+const emailRef = useRef('');
+const passwordRef = useRef('');
+
+const navigate = useNavigate();
+
+
+const navigateLogin = () => {
+    navigate('/login')
+}
+const handleRegister = event => {
+    event.preventDefault();
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+
+    createUserWithEmailAndPassword(email,password);
+}
+  
   return (
     <div className=" container mx-auto">
         <div className="m-auto py-12 px-6 sm:p-20 xl:w-10/12">
@@ -38,9 +65,10 @@ const SignUp = () => {
             </span>
           </div>
 
-          <form action="" className="space-y-8 py-6">
+          <form onSubmit={handleRegister} className="space-y-8 py-6">
             <div>
               <input
+              ref={emailRef}
                 type="email"
                 placeholder="Your Email"
                 className="w-full py-3 px-6 ring-1 ring-gray-300 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none" required
@@ -49,6 +77,7 @@ const SignUp = () => {
 
             <div className="flex flex-col justify-center items-center">
               <input
+              ref={passwordRef}
                 type="password"
                 placeholder="What's the secret word ?"
                 className="w-full py-3 px-6 ring-1 ring-gray-300 rounded-lg placeholder-gray-600 bg-transparent transition disabled:ring-gray-200 disabled:bg-gray-100 disabled:placeholder-gray-400 invalid:ring-red-400 focus:invalid:outline-none" required
@@ -60,9 +89,8 @@ const SignUp = () => {
               <button className="w-full px-6 py-3 rounded-lg bg-sky-500 transition hover:bg-sky-600 focus:bg-sky-600 active:bg-sky-800">
                 <span className="font-semibold text-white text-lg">SignUp</span>
               </button>
-              <p className="text-sm text-center text-slate-600">Already have an account?<Link to="/login" type="reset" className="w-max p-3 -ml-3">
-                <span className="no-underline">
-                  Login
+              <p className="text-sm text-center text-slate-600 mt-3">Already have an account? <Link to="/login" onClick={navigateLogin} className="text-danger pe-auto text-decoration-none"> 
+                <span className="no-underline"> Login
                 </span>
               </Link></p> 
             </div>

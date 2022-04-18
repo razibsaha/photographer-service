@@ -11,6 +11,7 @@ import Portfolio from './Components/Portfolio/Portfolio';
 import AboutMe from './Components/AboutMe/AboutMe';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
+import NotFound from './Components/NotFound/NotFound';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path='/about' element={<AboutMe></AboutMe>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<SignUp></SignUp>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
     </>
