@@ -51,7 +51,7 @@ const Navbar = () => {
                   </ul>
 
                   <div class="border-t py-8 px-6 md:px-12 md:py-16 lg:border-t-0 lg:border-l lg:py-0 lg:pr-0 lg:pl-6">
-                    <Link to='/' class="block px-6 py-3 rounded-full bg-gradient-to-r from-sky-600 to-cyan-400 text-center text-white">
+                    <Link to='/login' class="block px-6 py-3 rounded-full bg-gradient-to-r from-sky-600 to-cyan-400 text-center text-white">
                       Login
                     </Link >
                   </div>
