@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
-import googleIcon from "../../Assets/icons/google-48.png";
-import githubIcon from "../../Assets/icons/github-48.png";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import LoginSocial from "./LoginSocial/LoginSocial";
 
 const Login = () => {
   const emailRef = useRef("");
@@ -31,38 +30,14 @@ const Login = () => {
   };
   return (
     <div className="container mx-auto">
-      <div className="m-auto py-12 px-6 sm:p-20 xl:w-10/12">
-        <div className="flex justify-center align-middle">
+      <div className="flex justify-center align-middle mt-5 -mb-10">
           <p className="font-medium text-3xl text-gray-600 text-center">
-            Welcome to Razib Saha Studio !{" "}
+            Welcome to Razib Saha Studio !
             <span className="text-blue-500"> Login.</span>
           </p>
         </div>
-
-        <div className="mt-12 grid gap-6 sm:grid-cols-2">
-          <button className="h-12 px-6 border border-blue-100 rounded-lg bg-blue-50 hover:bg-blue-100 focus:bg-blue-100 active:bg-blue-200">
-            <div className="flex items-center space-x-4 justify-center">
-              <img src={googleIcon} className="w-5" alt="" />
-              <span className="block w-max font-medium tracking-wide text-sm text-blue-700">
-                with Google
-              </span>
-            </div>
-          </button>
-          <button className="h-12 px-6 rounded-lg bg-slate-500 transition hover:bg-gray-800 active:bg-gray-600 focus:bg-gray-700">
-            <div className="flex items-center space-x-4 justify-center">
-              <img src={githubIcon} className="w-5" alt="" />
-              <span className="block w-max font-medium tracking-wide text-sm text-slate-50">
-                with Github
-              </span>
-            </div>
-          </button>
-        </div>
-
-        <div className="mt-12 border-t">
-          <span className="block w-max mx-auto -mt-3 px-4 text-center text-gray-500 bg-white">
-            Or
-          </span>
-        </div>
+        
+      <LoginSocial></LoginSocial>
 
         <form onSubmit={handleSubmit} className="space-y-8 py-6">
           <div>
@@ -101,7 +76,6 @@ const Login = () => {
           </div>
         </form>
       </div>
-    </div>
   );
 };
 
