@@ -1,0 +1,25 @@
+/* 
+1. Create a new project in Console.firebase.google.com
+2. npm install firebase
+3. create firebase.init.js and import getAuth to export auth
+4. Go to settings> authentication > enable email and password auth
+5. Create Login, SignUP component, Setup route
+6. Attach form field handler and form submit handler
+7. install npm install --save react-firebase-hooks
+8. useCreateUserWithEmailAndPassword from react-firebase-hooks
+9. If user is created redirect them to expected route
+10. useCreateUserWithEmailAndPassword(auth) for signin
+11. Create RequiredAuth Component ==> check user exists also tract user
+12. In route wrap Protected Component by using require auth component
+*/
+
+
+/* 
+Firebase Hosting steps
+
+1. npm install -g firebase-tools(one time for your pc)
+2. firebase login(one time for your pc)
+3. firebase init (for each project)
+4. npm run build (build your project before each deploy)
+5. firebase deploy
+*/
