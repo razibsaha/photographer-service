@@ -5,18 +5,20 @@ import auth from "../../firebase.init";
 import LoginSocial from "./LoginSocial/LoginSocial";
 
 const Login = () => {
-  const emailRef = useRef("");
-  const passwordRef = useRef("");
-  const navigate = useNavigate();
-  const location = useLocation();
+  const emailRef = useRef('');
+    const passwordRef = useRef('');
+    const navigate = useNavigate();
+    const location = useLocation()
+    
 
-  let from = location.state?.from?.pathname || "/";
+
+    let from = location.state?.from?.pathname || '/';
 
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
-  if (user) {
-    navigate(from, { replace: true });
+    if(user){
+      navigate(from, {replace:true});
   }
 
   const handleSubmit = (event) => {

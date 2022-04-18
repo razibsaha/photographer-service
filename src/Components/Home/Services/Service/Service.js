@@ -1,8 +1,13 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const Service = ({ service }) => {
-  const { name, price, description, url } = service;
+  const { id, name, price, description, url } = service;
+  const navigate = useNavigate();
+    const navigateToServiceDetail = (id, name, price, description, url) =>{
+        navigate(`/service/${id}`)
+    }
   return (
     <div>
       <Card className="hover:scale-110 md:transform-none" style={{ width: "24rem" }}>
@@ -23,7 +28,7 @@ const Service = ({ service }) => {
           </div>
 
           <Card.Text>{description}</Card.Text>
-          <Button variant="primary">Check Details</Button>
+          <Button onClick={()=>navigateToServiceDetail(id, name, price, description, url)} variant="primary">Check Details</Button>
         </Card.Body>
       </Card>
     </div>
