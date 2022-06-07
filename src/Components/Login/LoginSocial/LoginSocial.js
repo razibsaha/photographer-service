@@ -7,6 +7,7 @@ import {
   useSignInWithGoogle,
 } from "react-firebase-hooks/auth";
 import { useLocation, useNavigate } from "react-router-dom";
+import Loading from "../../Shared/Loading/Loading";
 
 const LoginSocial = () => {
   const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -23,15 +24,13 @@ const LoginSocial = () => {
   let errorMessage;
   if (error || error1) {
     errorMessage = (
-      <div>
-        <p className="text-red-600">
-          Error: {error?.message} {error1?.message}
-        </p>
-      </div>
+      <p className="text-red-600">
+        Error: {error?.message} {error1?.message}
+      </p>
     );
   }
   if (loading || loading1) {
-    <p>Loading...</p>;
+    return <Loading></Loading>
   }
   if (user || user1) {
     navigate("/home");

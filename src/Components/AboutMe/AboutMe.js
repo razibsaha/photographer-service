@@ -1,9 +1,18 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 import dp from "../../Assets/Images/dp.png";
 
+
 const AboutMe = () => {
+  
   return (
     <div>
+      <Helmet>
+        <title>
+          About - Razib Saha Photographpy
+        </title>
+      </Helmet>
+      
       <div className="container mx-auto flex justify-center align-middle my-5">
         <h1>About me</h1>
       </div>

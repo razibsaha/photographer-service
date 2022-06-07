@@ -13,7 +13,7 @@ const Services = () => {
   return (
     <div>
       <div className="container md:d-flex text-center mx-auto my-5">
-        <h6>What are offering <span className="text-red-500">{services.length}</span> services </h6>
+        <h6>What are offering <span className="text-[#D5B69C]">{services.length}</span> services </h6>
         <h1>Exclusive Memories Captured</h1>
       </div>
       <div className="container relative d-flex gap-5 flex-wrap justify-center align-middle mx-auto">

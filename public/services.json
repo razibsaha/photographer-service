@@ -2,42 +2,42 @@
     {
         "id":1,
         "name": "Photo Shooting",
-        "description": "Taking photos for a whole day",
+        "description": "A full day photo shooting at Saha studio. Four to Eight hours. Location can be outside too based on the requirements",
         "url": "./Assets/ServicesImage/photo-shooting.jpg",
         "price": "$399.99"
     },
     {
         "id":2,
         "name": "Video Shooting",
-        "description": "Taking photos for a whole day",
+        "description": "There is the latest video capturing cameras in Saha studio. You can get 4k to 8k videos. I bought the red camera few days ago.",
         "url": "./Assets/ServicesImage/video-shooting.jpg",
         "price": "$999.99"
     },
     {
         "id":3,
         "name": "Photo Editing",
-        "description": "Taking photos for a whole day",
+        "description": "If you have already photos taken or want the photos that I takes to be edited as well, you can purchase this service.",
         "url": "./Assets/ServicesImage/Photo-Editing.jpg",
         "price": "$649.99"
     },
     {
         "id":4,
         "name": "Pre Wedding",
-        "description": "Taking photos for a whole day",
+        "description": "It's a thing nowadays. I have contract with some of the best outdoor location in the locality. A full day outdoor shoot for Eight to Ten hours.",
         "url": "./Assets/ServicesImage/Pre-Wedding.jpg",
         "price": "$1299.99"
     },
     {
         "id":5,
         "name": "Event Organize",
-        "description": "Taking photos for a whole day",
+        "description": "I can decorate your event like it's a dream. Whether is is a small wedding program, birthday party or office gathering.",
         "url": "./Assets/ServicesImage/Event-Organize.jpg",
         "price": "$4999.99"
     },
     {
         "id":6,
         "name": "Photo Printing",
-        "description": "Taking photos for a whole day",
+        "description": "At Saha studio you can get the best quality papers for your exclusive moment with special frames.",
         "url": "./Assets/ServicesImage/photo-printing.jpg",
         "price": "$99.99"
     }

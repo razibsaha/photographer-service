@@ -5,7 +5,7 @@ import Navbar from './Navbar/Navbar';
 const Header = () => {
     return (
         <div>
-            <div className='flex justify-center'>
+            <div className='relative flex justify-center'>
             <img src={logo} alt="{logo}" />
             </div>
             <div>
